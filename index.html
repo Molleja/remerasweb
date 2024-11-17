@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> WOLF - Inicio</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/stylesWCD.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    
+</head>
+<body>
+    <script src="https://www.paypal.com/sdk/js?client-id=ATzKvvz1LkxV_wWM1Ie9kWQkWLynKBMKQNyk_4kE9NdV0pnm51GNsqOpFb140UxcP4ERImZajU9XUzhK&currency=USD"></script>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="Manqui Remeras Logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                  
+                </ul>
+                <div class="cart-icon" id="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Bienvenido a WOLF</h1>
+                <p>"Usa un estilo de vida destacado con libertad"</p>
+                <a href="catalogo.html" class="cta-button">Ver Catálogo</a>
+            </div>
+        </section>
+   
+        <h2 class="halloween-section-title">¡Descuentos de Halloween!</h2>
+
+        <div class="product-grid" id="tarjetas-container">
+            <div class="product-item">
+                <div class="product-image-container">
+                    <img src="img/remera3.jpg" alt="La Calabaza de Halloween" class="product-image" style="object-position: top;">
+                    <div class="halloween-icon">🎃</div> <!-- Icono calabaza -->
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">La Calabaza de Halloween</h2>
+                    <p class="product-brand">Especiales de Halloween</p>
+                    <p class="product-price">$ 380 MXN</p>
+                    <button class="add-to-cart" data-id="1" data-name="La Cabeza de Halloween" data-price="29.99" style="margin-top: 2rem;">Añadir al carrito</button>
+                </div>
+            </div>
+        
+            <div class="product-item">
+                <div class="product-image-container">
+                    <img src="img/remera5.jpg" style="object-position: top;" alt="Calaberas Rateras" class="product-image">
+                    <div class="offer-tag">Oferta</div>
+                    <div class="halloween-icon">💀</div> <!-- Icono calavera -->
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Calaberas Rateras</h2>
+                    <p class="product-brand">Especiales Halloween</p>
+                    <p class="product-price">
+                        <span class="original-price">$ 375 MXN</span>
+                        $ 450 MXN
+                    </p>
+                    <button class="add-to-cart" data-id="1" data-name="Calaberas Rateras" data-price="29.99" style="margin-top: 2rem;">Añadir al carrito</button>
+                </div>
+            </div>
+        
+            <div class="product-item">
+                <div class="product-image-container">
+                    <img src="img/remera4.jpg" alt="Murcielagos Locos" class="product-image" style="object-position: top;">
+                    <div class="offer-tag">Oferta</div>
+                    <div class="halloween-icon">🦇</div> <!-- Icono araña -->
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Murcielagos Locos</h2>
+                    <p class="product-brand">Especiales Halloween</p>
+                    <p class="product-price">
+                        <span class="original-price">$ 390 MXN</span>
+                        $ 470 MXN
+                    </p>
+                    <button style="margin-top: 2rem;" class="add-to-cart" data-id="1" data-name="Murcielagos Locos" data-price="29.99">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+        
+
+    <section class="about-section">
+        <div class="about-container">
+            <div class="logo-nosotros">
+                <img src="logo.png" alt="Logo" class="logo-image">
+            </div>
+            <div class="about-text">
+                <h2>¿Quiénes Somos?</h2>
+                <p>Somos una sociación de latinoamerica que desarolla remeras de alta calidad.</p>
+            </div>
+        </div>
+    </section>
+    
+
+   </section>
+        </section>
+        <section id="contacto" class="form-contenedor"        style="display: flex; justify-content: center;">
+        
+           
+            <form id="contactForm" class="contacto-form" data-aos="fade-right"
+      style="margin-right: 3rem;"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine" data-aos-duration="800"  action="https://formspree.io/f/xgvevvyz"
+            method="POST">
+            <h1 class="text-4xl font-bold mb-6">Contacto</h1>
+
+                <div class="mb-4">
+                    
+                    <input id="nombre" type="text" placeholder="Ingresa tu nombre completo" required class="contacto-form shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="mb-4">
+               
+                    <input id="email" type="email" name="email" placeholder="Ingresa tu correo electronico" required class="contacto-form appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="mb-4">
+                    
+                    <input id="telefono" type="tel" name="message" placeholder="Ingresa tu numero de telefono" required class="contacto-form appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="mb-4">
+                   
+                    <textarea id="descripcion" placeholder="Describe tu proyecto o consulta" name="message" class="contacto-form appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+                <button style="margin-bottom: 2rem;" type="submit" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Enviar</button>
+            </form>
+            <p class="p-contacto" >Si preferis comunicarte por WhatsApp, <a href="https://wa.me/59897544083?text=Hola%20me%20gustaría%20más%20información" target="_blank">
+                hace click aquí,
+            </a>
+                Te prometemos una respuesta <strong> no automática.</strong>
+
+            </p>
+        </section>
+        
+        </section>
+        <div>
+        <img src="./img/lobo.gif" class="walking-gif" alt="Caminando">
+    </div>
+
+        
+          <!-- Botón de WhatsApp -->
+<a href="https://wa.me/+5219211124290" class="whatsapp-btn" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp">
+</a>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>WOLF</h3>
+                    <p>"Usa un estilo de vida destacado con libertad"</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="catalogo.html">Catálogo</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <a href="#" target="_blank"><i class="fab fa-facebook" ></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;  2024 WOLF Remeras. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal del carrito -->
+    <div id="cart-modal" class="cart-modal">
+      
+        <h2>Tu Carrito</h2>
+       <p style="max-width: 150px;"> Al hacer una compra aquí <strong>automaticamente</strong> aceptas los <a href="./tyc.html" target="_blank">
+        Terrminos y Condiciones
+    </a> </p>
+        <div id="cart-items"></div>
+        <div class="cart-total">Total: $<span id="cart-total">0.00</span></div>
+        <div id="paypal-button-container">
+    
+        
+    </div>
+
+    <script src="js/carrito.js"></script>
+    
+</html>

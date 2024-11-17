@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOLF - Catalogo</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <script src="https://www.paypal.com/sdk/js?client-id=ATzKvvz1LkxV_wWM1Ie9kWQkWLynKBMKQNyk_4kE9NdV0pnm51GNsqOpFb140UxcP4ERImZajU9XUzhK&currency=USD"></script>
+
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="Manqui Remeras Logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+                <div class="cart-icon" id="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Catalogo</h1>
+                <p>"Usa un estilo de vida destacado con libertad"</p>
+            </div>
+        </section>
+
+        <section class="product-catalog">
+            <div class="container">
+                <div id="product-grid" class="product-grid">
+                    <!-- Tarjetas de productos agregadas manualmente -->
+                    <div class="product-card slide-in">
+                        <div class="image-container">
+                            <img src="img/remera1.jpg" alt="Remera Diseño Calavera" class="main-image">
+                            <img src="img/remera1detras.png" alt="Remera Diseño Calavera (Hover)" class="hover-image">
+                        </div>
+                        <div class="product-card-content">
+                            <h3>Remera Diseño Calavera</h3>
+                            <p class="price">$29.99</p>
+                            <button class="add-to-cart" data-id="1" data-name="Remera Diseño Calavera" data-price="29.99">Añadir al carrito</button>
+                        </div>
+                    </div>
+                    <div class="product-card slide-in">
+                        <div class="image-container">
+                            <img src="img/remera2.jpg" alt="Remera Diseño Calavera" class="main-image">
+                            <img src="img/remera2detras.jpg" alt="Remera Diseño Calavera (Hover)" class="hover-image">
+                        </div>
+                        <div class="product-card-content">
+                            <h3>Remera Diseño Abstracto</h3>
+                            <p class="price">$27.99</p>
+                            <button class="add-to-cart" data-id="2" data-name="Remera Diseño Abstracto" data-price="27.99">Añadir al carrito</button>
+                        </div>
+                    </div>
+                    <div class="product-card slide-in">
+                        <div class="image-container">
+                            <img src="img/remera3.jpg" alt="Remera Diseño Calavera" class="main-image" >
+                            <img src="img/remera3detras.jpg" alt="Remera Diseño Calavera (Hover)" class="hover-image">
+                        </div>
+                        <div class="product-card-content">
+                            <h3>Remera Diseño Geométrico</h3>
+                            <p class="price">$31.99</p>
+                            <button class="add-to-cart" data-id="3" data-name="Remera Diseño Geométrico" data-price="31.99">Añadir al carrito</button>
+                        </div>
+                    </div>
+                    <div class="product-card slide-in">
+                        <div class="image-container">
+                            <img src="img/remera4.jpg" alt="Remera Diseño Calavera" class="main-image">
+                            <img src="img/remera4detras.jpg" alt="Remera Diseño Calavera (Hover)" class="hover-image">
+                        </div>
+                        <div class="product-card-content">
+                            <h3>Remera Diseño Floral</h3>
+                            <p class="price">$28.99</p>
+                            <button class="add-to-cart" data-id="4" data-name="Remera Diseño Floral" data-price="28.99">Añadir al carrito</button>
+                        </div>
+                    </div>
+                    <div class="product-card slide-in">
+                        <div class="image-container">
+                            <img src="img/remera5.jpg" alt="Remera Diseño Calavera" class="main-image">
+                            <img src="img/remera5detras.jpg" alt="Remera Diseño Calavera (Hover)" class="hover-image">
+                        </div>
+                        <div class="product-card-content">
+                            <h3>Remera Diseño Minimalista</h3>
+                            <p class="price">$25.99</p>
+                            <button class="add-to-cart" data-id="5" data-name="Remera Diseño Minimalista" data-price="25.99">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+              <!-- Botón de WhatsApp -->
+<a href="https://wa.me/+5219211124290" class="whatsapp-btn" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp">
+</a>
+
+    <!-- Modal del carrito -->
+    <div id="cart-modal" class="cart-modal">
+      
+        <h2>Tu Carrito</h2>
+        <p style="max-width: 150px;"> Al hacer una compra aquí <strong>automaticamente</strong> aceptas los <a href="./tyc.html" target="_blank">
+            Terrminos y Condiciones
+        </a> </p>
+        <div id="cart-items"></div>
+        <div class="cart-total">Total: $<span id="cart-total">0.00</span></div>
+        <div id="paypal-button-container">
+    
+        
+    </div>
+
+    
+    </div>
+  
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>WOLF</h3>
+                    <p>"Usa un estilo de vida destacado con libertad"</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="catalogo.html">Catálogo</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 WOLF Remeras. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+
+    <script src="js/carrito.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const productCards = document.querySelectorAll('.product-card');
+
+    productCards.forEach(card => {
+        const mainImage = card.querySelector('.main-image');
+        const hoverImage = card.querySelector('.hover-image');
+
+        card.addEventListener('mouseenter', () => {
+            mainImage.style.opacity = '0';
+            hoverImage.style.opacity = '1';
+        });
+
+        card.addEventListener('mouseleave', () => {
+            mainImage.style.opacity = '1';
+            hoverImage.style.opacity = '0';
+        });
+    });
+});
+  </script>
+    
+</body>
+</html>

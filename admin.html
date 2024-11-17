@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - WOLF</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Administrar Productos</h1>
+
+    <!-- Formulario para añadir productos -->
+    <form id="form-add-product">
+        <input type="text" id="nombre" placeholder="Nombre del producto" required>
+        <input type="text" id="descripcion" placeholder="Descripción" required>
+        <input type="number" id="precio" placeholder="Precio" required>
+        <input type="number" id="stock" placeholder="Stock" required>
+        <input type="url" id="imagen" placeholder="URL de la imagen" required>
+        <button type="submit">Añadir Producto</button>
+    </form>
+
+    <!-- Formulario para eliminar productos -->
+    <form id="form-delete-product">
+        <input type="text" id="nombre-eliminar" placeholder="Nombre del producto a eliminar" required>
+        <button type="submit">Eliminar Producto</button>
+    </form>
+
+    <script>
+        // URL de tu backend en Vercel
+        const backendURL = "https://tu-backend.vercel.app";
+
+        // Función para agregar un producto
+        document.getElementById('form-add-product').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const nuevoProducto = {
+                nombre: document.getElementById('nombre').value,
+                descripcion: document.getElementById('descripcion').value,
+                precio: parseFloat(document.getElementById('precio').value),
+                stock: parseInt(document.getElementById('stock').value),
+                imagen: document.getElementById('imagen').value
+            };
+
+            try {
+                const response = await fetch(`${backendURL}/productos`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(nuevoProducto)
+                });
+
+                if (response.ok) {
+                    alert('Producto añadido correctamente');
+                    document.getElementById('form-add-product').reset();
+                } else {
+                    alert('Error al añadir el producto');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error al conectar con el servidor');
+            }
+        });
+
+        // Función para eliminar un producto
+        document.getElementById('form-delete-product').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const nombreProducto = document.getElementById('nombre-eliminar').value;
+
+            try {
+                const response = await fetch(`${backendURL}/productos/${nombreProducto}`, {
+                    method: 'DELETE'
+                });
+
+                if (response.ok) {
+                    alert('Producto eliminado correctamente');
+                    document.getElementById('form-delete-product').reset();
+                } else {
+                    alert('Error al eliminar el producto');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error al conectar con el servidor');
+            }
+        });
+    </script>
+</body>
+</html>
+
